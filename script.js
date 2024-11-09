@@ -78,3 +78,4 @@ squares.addEventListener("mousedown", (event) => {
     }
         
 })
+
