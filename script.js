@@ -8,3 +8,13 @@ for (let i = 0; i < 16; i++) {
         squares.appendChild(div);
     }
 }
+
+
+function changeBackgroundColor(element) {
+    element.style.backgroundColor = "#000";
+}
+
+squares.addEventListener("mouseover", (event) => {
+    const element = event.target;
+    changeBackgroundColor(element);
+})

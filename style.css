@@ -1,11 +1,6 @@
 .squares {
     display: flex;
     flex-wrap: wrap;
-    width: 256px;
-    height: 256px;
-}
-
-.squares>div {
-    width: 16px;
-    height: 16px;
+    width: 1000px;
+    height: 1000px;
 }
