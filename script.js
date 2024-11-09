@@ -16,6 +16,17 @@ function generateGrid(size) {
         }
 }
 
+function calculateRandomHex() {
+    const number = Math.floor(Math.random()*256).toString(16);
+    return number
+}
+
+function calculateRandomColor() {
+    const randomHex = '#' + calculateRandomHex() + calculateRandomHex() + calculateRandomHex();
+    
+    return randomHex
+}
+
 function deleteGrid() {
     squares.innerHTML = "";
 }
@@ -32,7 +43,9 @@ function returnWidthAndHeight(size) {
 
 
 function changeBackgroundColor(element) {
-    element.style.backgroundColor = "#000";
+    
+    const bgColor = calculateRandomColor();
+    element.style.backgroundColor = bgColor
 }
 
 squares.addEventListener("mouseover", (event) => {
