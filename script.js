@@ -73,5 +73,8 @@ gridSizeButton.addEventListener("click", (event) => {
 
 squares.addEventListener("mousedown", (event) => {
     const element = event.target;
-    reduceOpacity(element);
+    if (element.className != "squares") {
+        reduceOpacity(element);
+    }
+        
 })
