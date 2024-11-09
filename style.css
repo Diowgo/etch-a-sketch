@@ -12,3 +12,26 @@
     box-sizing: content-box;
     border: 3px solid black;
 }
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 1250px;
+    align-items: center;
+}
+
+button {
+    padding: 20px;
+    border-radius: 25px;
+    border: 0;
+    background-color: #4040ff;
+    color: #fff;
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
