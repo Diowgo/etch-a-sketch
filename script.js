@@ -10,10 +10,21 @@ function generateGrid(size) {
 
                 const heightAndWidth = returnWidthAndHeight(size);
                 setWidthAndHeight(div, heightAndWidth);
-
+                changeBackgroundColor(div);
                 squares.appendChild(div);
             }
         }
+}
+
+function reduceOpacity(element) {
+    if (element.style.opacity == "") {
+        element.style.opacity = 1;
+    }
+
+    if (element.style.opacity > 0) {
+        element.style.opacity -= 0.25;
+    }
+
 }
 
 function calculateRandomHex() {
@@ -58,4 +69,9 @@ squares.addEventListener("mouseover", (event) => {
 gridSizeButton.addEventListener("click", (event) => {
     deleteGrid();
     generateGrid(parseInt(prompt("Grid size")));
+})
+
+squares.addEventListener("mousedown", (event) => {
+    const element = event.target;
+    reduceOpacity(element);
 })
